@@ -1,4 +1,5 @@
 FROM golang:latest
+ENV GO111MODULE=off
 
 RUN apt update -y --allow-insecure-repositories && apt upgrade -y && \ 
   apt install -y git && \
