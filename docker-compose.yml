@@ -1,12 +1,12 @@
-name: AirsideAutoDelete
+name: airside_auto_delete
 services:
     autodelete:
         ports:
             - 2202:2202/tcp
         container_name: Autodelete
         volumes:
-            - /opt/AutoDelete/config.yml:/autodelete/config.yml
-            - /opt/AutoDelete/data/:/autodelete/data/
+            - ./AutoDelete/config.yml:/autodelete/config.yml
+            - ./AutoDelete/data/:/autodelete/data/
         restart: always
-        image: ghcr.io/dualmoon/AirsideAutoDelete:latest
+        image: ghcr.io/dualmoon/airsideautodelete:master
 
